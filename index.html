@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla de Impuestos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Impuestos</h1>
+        <form id="tax-form">
+            <label for="client-id">ID de Cliente:</label>
+            <input type="text" id="client-id" placeholder="Ej: 12345" required aria-label="ID de Cliente">
+            <label for="income">Valor principal:</label>
+            <input type="number" id="income" placeholder="Ej: 50000" required aria-label="Valor principal">
+            
+            <label for="charge">Encargos:</label> <!-- Cambié 'tax-rate' por 'charge' -->
+            <input type="number" id="charge" placeholder="Ej: 2000" required aria-label="Encargos">
+            
+            <label for="installments">Cantidad de Parcelas:</label>
+            <input type="number" id="installments" placeholder="Ej: 12" required aria-label="Cantidad de Parcelas">
+            
+            <label for="start-date">Fecha de Inicio:</label>
+            <input type="date" id="start-date" required aria-label="Fecha de Inicio">
+            
+            <button type="button" id="generate-planilla-btn">Generar Planilla</button>
+            <button type="button" id="clear">Limpiar</button>
+        </form>
+
+        <div>
+            <label for="search-client-btn">ID Cliente:</label>
+            <input type="text" id="search-client-btn" placeholder="Ingrese ID del Cliente">
+            <button type="button" id="search-client-btn">Buscar Cliente</button>
+        </div>
+        <p id="error-message" style="color: red; display: none;">Por favor, complete todos los campos correctamente.</p> <!-- Mensaje de error -->
+    </div>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</body>
+</html>
